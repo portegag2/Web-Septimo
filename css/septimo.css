@@ -1,0 +1,39 @@
+
+/* Estilo para la tilde */
+/* Paleta de colores */
+:root {
+    --text-primary: #f5b208; /* Texto principal */
+    --accent-tilde: #264653; /* Color especial para la tilde */
+}
+
+.septimo{
+    font-family: "Montserrat variant1", Tofu;
+    color: var(--text-primary);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.septimo .tilde {
+    color: #264653 var(--accent-tilde);
+}
+
+.septimo .arroba{
+    color: #2A9D8F;
+    font-size: smaller;
+}
+
+
+.img-producto { 
+    width: 160px; 
+    height: 120px; 
+    overflow: hidden; /* Oculta cualquier parte que exceda el contenedor */ 
+    position: relative; 
+} 
+
+.img-producto img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Esto hace que la imagen se ajuste al contenedor */ 
+    object-position: center; /* Centra la imagen dentro del contenedor */ 
+    transform: scale(1.1); /* Ajusta el valor del zoom según lo necesites */ 
+}
