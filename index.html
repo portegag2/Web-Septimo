@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/tooplate-antique-cafe.css">
     <link rel="stylesheet" href="css/septimo.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <script src="js/formulario.js" defer></script>
+
     
 <!--
 
@@ -170,6 +173,36 @@ https://www.tooplate.com/view/2126-antique-cafe
                 </div>
                 <div class="flex-1 rounded-xl p-12 pb-14 m-5 bg-black bg-opacity-50 tm-item-container">
                     <form action="" method="POST" class="text-lg">
+                        <!-- Añadido IA -->
+                        <div class="opcion">
+                            <label class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">
+                                <input type="checkbox" class="plato" data-tamano="ensalada"> Ensalada del día
+                            </label>
+                            <div class="tamanos">
+                                <button class="tamano justify-center items-center bg-white bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition" data-plato="ensalada" data-size="grande" disabled>Grande</button>
+                                <button class="tamano justify-center items-center bg-white bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition" data-plato="ensalada" data-size="pequeno" disabled>Pequeño</button>
+                            </div>
+                        </div>
+                        <div class="opcion">
+                            <label class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">
+                                <input type="checkbox" class="plato" data-tamano="crema"> Crema del día
+                            </label>
+                            <div class="tamanos">
+                                <button class="tamano justify-center items-center bg-white bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition" data-plato="crema" data-size="grande" disabled>Grande</button>
+                                <button class="tamano justify-center items-center bg-white bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition" data-plato="crema" data-size="pequeno" disabled>Pequeño</button>
+                            </div>
+                        </div>
+                        <div class="opcion">
+                            <label class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">
+                                <input type="checkbox" class="plato" data-tamano="plato"> Plato del día
+                            </label>
+                            <div class="tamanos">
+                                <button class="tamano justify-center items-center bg-white bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition" data-plato="plato" data-size="grande" disabled>Grande</button>
+                                <button class="tamano justify-center items-center bg-white bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition" data-plato="plato" data-size="pequeno" disabled>Pequeño</button>
+                            </div>
+                        </div>
+                        <div class="total flex justify-center items-center bg-white py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition">Total: €<span id="total-precio">0.00</span></div>
+                        <!-- Fin añadido--> 
                         <input type="text" name="name" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Name" required="" />
                         <input type="email" name="email" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Email" required="" />
                         <textarea rows="6" name="message" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Message..." required=""></textarea>
@@ -191,6 +224,7 @@ https://www.tooplate.com/view/2126-antique-cafe
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/jquery.singlePageNav.js"></script>
+    
     <script>
 
         function checkAndShowHideMenu() {

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Comida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+        .formulario {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .opcion {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .tamanos button {
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .tamanos button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .tamanos button.activo {
+            background: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="formulario">
+        <div class="opcion">
+            <label>
+                <input type="checkbox" class="plato" data-tamano="ensalada"> Ensalada del día
+            </label>
+            <div class="tamanos">
+                <button class="tamano" data-plato="ensalada" data-size="grande" disabled>Grande</button>
+                <button class="tamano" data-plato="ensalada" data-size="pequeno" disabled>Pequeño</button>
+            </div>
+        </div>
+        <div class="opcion">
+            <label>
+                <input type="checkbox" class="plato" data-tamano="crema"> Crema del día
+            </label>
+            <div class="tamanos">
+                <button class="tamano" data-plato="crema" data-size="grande" disabled>Grande</button>
+                <button class="tamano" data-plato="crema" data-size="pequeno" disabled>Pequeño</button>
+            </div>
+        </div>
+        <div class="opcion">
+            <label>
+                <input type="checkbox" class="plato" data-tamano="plato"> Plato del día
+            </label>
+            <div class="tamanos">
+                <button class="tamano" data-plato="plato" data-size="grande" disabled>Grande</button>
+                <button class="tamano" data-plato="plato" data-size="pequeno" disabled>Pequeño</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.plato').forEach(plato => {
+            plato.addEventListener('change', function() {
+                let platoSeleccionado = this.dataset.tamano;
+                let botonesTamano = document.querySelectorAll(`.tamano[data-plato="${platoSeleccionado}"]`);
+                
+                if (this.checked) {
+                    botonesTamano.forEach(btn => btn.disabled = false);
+                } else {
+                    botonesTamano.forEach(btn => {
+                        btn.disabled = true;
+                        btn.classList.remove('activo');
+                    });
+                }
+            });
+        });
+
+        document.querySelectorAll('.tamano').forEach(boton => {
+            boton.addEventListener('click', function() {
+                let plato = this.dataset.plato;
+                document.querySelectorAll(`.tamano[data-plato="${plato}"]`).forEach(btn => btn.classList.remove('activo'));
+                this.classList.add('activo');
+            });
+        });
+    </script>
+</body>
+</html>
