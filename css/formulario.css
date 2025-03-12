@@ -35,3 +35,49 @@
     font-weight: bold;
     text-align: center;
 }
+
+.opcion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.opcion input {
+    display: none; /* Oculta el checkbox */
+}
+
+.opcion .slider {
+    position: relative;
+    cursor: pointer;
+    width: 40px; /* Ancho del toggle */
+    height: 20px; /* Alto del toggle */
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Espacio entre el toggle y el texto */
+}
+
+.opcion input:checked + .slider {
+    background-color: #006666; /* Color cuando está activo */
+}
+
+.opcion .slider:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 2px; /* Posición inicial del círculo */
+    width: 16px; /* Ancho del círculo */
+    height: 16px; /* Alto del círculo */
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    transform: translateY(-50%);
+}
+
+.opcion input:checked + .slider:before {
+    transform: translate(20px, -50%); /* Mueve el círculo a la derecha */
+}
+
+.opcion .texto {
+    font-size: 16px; /* Tamaño del texto */
+}

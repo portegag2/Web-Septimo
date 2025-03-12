@@ -175,8 +175,10 @@ https://www.tooplate.com/view/2126-antique-cafe
                     <form action="" method="POST" class="text-lg">
                         <!-- Añadido IA -->
                         <div class="opcion">
-                            <label class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">
-                                <input type="checkbox" class="plato" data-tamano="ensalada"> Ensalada del día
+                            <label class="opcion text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">
+                                <input type="checkbox" class="plato" data-tamano="ensalada">
+                                <span class="slider"></span>
+                                <span class="texto">Ensalada del día</span>
                             </label>
                             <div class="tamanos">
                                 <button class="tamano justify-center items-center bg-white bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition" data-plato="ensalada" data-size="grande" disabled>Grande</button>
@@ -184,8 +186,10 @@ https://www.tooplate.com/view/2126-antique-cafe
                             </div>
                         </div>
                         <div class="opcion">
-                            <label class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">
-                                <input type="checkbox" class="plato" data-tamano="crema"> Crema del día
+                            <label class="opcion text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">
+                                <input type="checkbox" class="plato" data-tamano="crema">
+                                <span class="slider"></span>
+                                <span class="texto">Crema del día</span>
                             </label>
                             <div class="tamanos">
                                 <button class="tamano justify-center items-center bg-white bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition" data-plato="crema" data-size="grande" disabled>Grande</button>
@@ -193,15 +197,17 @@ https://www.tooplate.com/view/2126-antique-cafe
                             </div>
                         </div>
                         <div class="opcion">
-                            <label class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">
-                                <input type="checkbox" class="plato" data-tamano="plato"> Plato del día
+                            <label class="opcion text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">
+                                <input type="checkbox" class="plato" data-tamano="plato">
+                                <span class="slider"></span>
+                                <span class="texto">Plato del día</span> <!-- Texto a la derecha -->
                             </label>
                             <div class="tamanos">
                                 <button class="tamano justify-center items-center bg-white bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition" data-plato="plato" data-size="grande" disabled>Grande</button>
                                 <button class="tamano justify-center items-center bg-white bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition" data-plato="plato" data-size="pequeno" disabled>Pequeño</button>
                             </div>
                         </div>
-                        <div class="total flex justify-center items-center bg-white py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition">Total: €<span id="total-precio">0.00</span></div>
+                        <div class="total flex justify-center items-center bg-white mb-2 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition">Total: €<span id="total-precio">0.00</span></div>
                         <!-- Fin añadido--> 
                         <input type="text" name="name" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Name" required="" />
                         <input type="email" name="email" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Email" required="" />
